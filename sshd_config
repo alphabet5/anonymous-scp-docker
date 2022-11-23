@@ -1,0 +1,16 @@
+AllowAgentForwarding no
+AllowTcpForwarding no
+#ChrootDirectory /files
+#ForceCommand internal-sftp
+GatewayPorts no
+X11Forwarding no
+AllowUsers anonymous
+AuthorizedKeysFile    .ssh/authorized_keys
+ListenAddress 0.0.0.0:22
+PasswordAuthentication yes
+PermitEmptyPasswords yes
+PermitRootLogin no
+Subsystem sftp internal-sftp
+KexAlgorithms +diffie-hellman-group-exchange-sha1
+HostKeyAlgorithms +ssh-rsa
+Ciphers +aes128-cbc
